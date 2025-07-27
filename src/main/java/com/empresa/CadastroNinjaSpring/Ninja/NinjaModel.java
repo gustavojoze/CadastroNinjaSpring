@@ -24,12 +24,14 @@ public class NinjaModel {
     private String name;
     @Column(unique = true,name = "email")
     private String email;
+    @Column(name="img_url")
+    private String imgUrl;
     @Column(name="idade")
     private int idade;
 
     //Um ninja só pode estar ligado apenas em uma missão
     @ManyToOne
     @JoinColumn(name="missoes_id") // Foreing Key ou chave estrangeira
-    private MissoesModel missao;
+    private MissoesModel missoes;
 
 }
